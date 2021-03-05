@@ -1,0 +1,225 @@
+body 
+{
+    margin:0;
+    background-color:moccasin;
+    color:rgb(0, 0, 0);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #f4f4f4;
+    
+    min-height: 100vh;
+    height: 100%;
+
+
+}
+
+form 
+{
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nimike {
+    min-width: 100px;
+    max-width: 200px;
+    text-align: left;
+    clear: none;
+
+}
+
+.tekstikentta {
+    min-width: 200px;
+    float: right; 
+    width:50%; 
+    max-width:500px;
+}
+
+
+.uutiskirje {
+    text-align: left;
+    
+}
+
+.uutiskirjenappi {
+    float:right;
+    position: relative;
+}
+
+
+.valittu {
+    background-color:darkolivegreen;
+}
+
+.alareuna {
+    height: 50px;
+}
+.footer {
+    
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    border-radius: 1px;
+    border-color:rgb(109, 109, 109);
+    border: solid;
+    
+    
+}
+
+.leipateksti {
+    
+    padding-top: 100px;
+    padding-bottom: 5rem;
+    background-color:rgb(221, 255, 221);
+    margin-bottom: -55px;
+}
+
+a {
+    color: #000;
+}
+
+.header {
+    background-color: rgb(113, 160, 117);
+    height: 65px;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+
+
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color:rgb(113, 160, 117);
+ 
+}
+
+.submenu {
+    display:none;
+}
+
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #ffffff;
+    text-decoration:none;
+ 
+}
+
+
+
+.header li a:hover,
+.header .menuNappi:hover {
+    background-color:olive;
+}
+
+.header .logo {
+display: block;
+float: left;
+font-size: 2em;
+padding: 10px 20px;
+text-decoration: none;
+}
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-ikoni {
+    cursor: pointer;
+    
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    
+}
+
+.header .menu-ikoni .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-ikoni .navicon:before,
+.header .menu-ikoni .navicon:after {
+    background:#333;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-ikoni .navicon:before {
+    top: 5px;
+
+}
+
+.header .menu-ikoni .navicon:after {
+    top: -5px;
+}
+
+.header .menuNappi {
+    display:none;
+}
+
+.header .menuNappi:checked ~ .menu {
+    max-height: 300px;
+    
+    float: right;
+   
+}
+
+
+.header .menuNappi:checked ~ .menu-ikoni .navicon {
+    background: transparent;
+}
+
+.header .menuNappi:checked ~.menu-ikoni .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menuNappi:checked ~.menu-ikoni .navicon::after {
+    transform: rotate(45deg);
+}
+
+.header .menuNappi:checked ~ .menu-ikoni:not(.steps) .navicon:before, .header .menuNappi:checked ~ .menu-ikoni:not(.steps) .navicon:after {
+    top: 0;
+}
+/*
+@media (min-width: 48em) {
+   .header li {
+        float: left;
+    }
+
+    header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-ikoni {
+        display: none;
+    }
+
+    #main-nav {border:groove; background-color:yellowgreen;}
+    ul {list-style: none; padding:0; margin:0;}
+    #main-nav > ul > li {display:inline-block; float:left; position:relative; }
+    .submenu {position:absolute; z-index: 3; width:auto; white-space:nowrap;display:none;}
+    li:hover > .submenu {display:block; overflow:visible; z-index: 3;}
+    a {color:rgb(0, 0, 0); text-decoration:none;}
+    }*/
